@@ -29,7 +29,7 @@ exports[`SearchForm should render and match snapshot 1`] = `
     >
       <img
         alt="search"
-        src="search_18dp.svg"
+        src="mockSearchIcon"
       />
     </button>
   </form>
