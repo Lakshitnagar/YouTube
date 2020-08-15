@@ -1,5 +1,6 @@
 import React from 'react';
 import './PopularSearches.scss';
+import Chip from "../common/Chip/Chip";
 
 const popularSearches = ["All Recommendations", "Sushant Singh Rajput", "Comedy", "Thrillers", "Spookiz", "TED Talks"];
 
@@ -8,8 +9,10 @@ function PopularSearches() {
         <div className="popularSearches">
             <div className="popularSearches__label">Popular Searches</div>
 
-            {popularSearches.map((popularSearch)=>{
-                return <div className="popularSearches__items">{popularSearch}</div>
+            {popularSearches.map((popularSearch, ind)=>{
+                return <div className="popularSearches__items" key={ind}>
+                    <Chip text={popularSearch}/>
+                </div>
             })}
         </div>
     );

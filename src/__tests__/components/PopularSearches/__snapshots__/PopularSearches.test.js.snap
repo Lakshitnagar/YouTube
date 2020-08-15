@@ -11,33 +11,51 @@ exports[`PopularSearches should render and match snapshot 1`] = `
   </div>
   <div
     className="popularSearches__items"
+    key="0"
   >
-    All Recommendations
+    <Chip
+      text="All Recommendations"
+    />
   </div>
   <div
     className="popularSearches__items"
+    key="1"
   >
-    Sushant Singh Rajput
+    <Chip
+      text="Sushant Singh Rajput"
+    />
   </div>
   <div
     className="popularSearches__items"
+    key="2"
   >
-    Comedy
+    <Chip
+      text="Comedy"
+    />
   </div>
   <div
     className="popularSearches__items"
+    key="3"
   >
-    Thrillers
+    <Chip
+      text="Thrillers"
+    />
   </div>
   <div
     className="popularSearches__items"
+    key="4"
   >
-    Spookiz
+    <Chip
+      text="Spookiz"
+    />
   </div>
   <div
     className="popularSearches__items"
+    key="5"
   >
-    TED Talks
+    <Chip
+      text="TED Talks"
+    />
   </div>
 </div>
 `;
