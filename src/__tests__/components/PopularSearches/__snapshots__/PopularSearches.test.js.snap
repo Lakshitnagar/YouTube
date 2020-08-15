@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PopularSearches should render and match snapshot 1`] = `
+<div
+  className="popularSearches"
+>
+  <div
+    className="popularSearches__label"
+  >
+    Popular Searches
+  </div>
+  <div
+    className="popularSearches__items"
+  >
+    All Recommendations
+  </div>
+  <div
+    className="popularSearches__items"
+  >
+    Sushant Singh Rajput
+  </div>
+  <div
+    className="popularSearches__items"
+  >
+    Comedy
+  </div>
+  <div
+    className="popularSearches__items"
+  >
+    Thrillers
+  </div>
+  <div
+    className="popularSearches__items"
+  >
+    Spookiz
+  </div>
+  <div
+    className="popularSearches__items"
+  >
+    TED Talks
+  </div>
+</div>
+`;

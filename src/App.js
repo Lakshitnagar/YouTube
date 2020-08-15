@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.scss';
 import AppHeader from "./components/AppHeader/AppHeader";
+import PopularSearches from "./components/PopularSearches/PopularSearches";
 
 function App() {
     return (
@@ -8,6 +9,8 @@ function App() {
             <header>
                 <AppHeader/>
             </header>
+
+            <PopularSearches/>
         </div>
     );
 }

@@ -1,0 +1,16 @@
+.popularSearches{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 16px;
+  height: 56px;
+  box-shadow: 0 1px 0px 0px rgba(0, 0, 0, 0.14);
+
+  .popularSearches__label{
+    padding: 0 20px;
+  }
+
+  .popularSearches__items{
+    margin-right: 25px;
+  }
+}
