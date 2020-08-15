@@ -3,5 +3,9 @@
 }
 
 .App-header {
-
+  display: flex;
+  justify-content: space-between;
+  padding: 0 16px;
+  height: 56px;
+  border: solid 1px;
 }

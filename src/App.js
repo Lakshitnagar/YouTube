@@ -1,11 +1,22 @@
 import React from 'react';
+import logo from './assets/images/logo.svg';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        Header
+        <div>
+          <img src={logo} alt={'logo'} height={20}/>
+        </div>
+
+        <div>
+          Search
+        </div>
+
+        <div>
+          accounts
+        </div>
       </header>
     </div>
   );
