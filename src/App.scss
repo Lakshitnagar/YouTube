@@ -1,12 +1,18 @@
-.App {
+.app {
   text-align: center;
 }
 
-.App-header {
+.appHeader {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 16px;
   height: 56px;
   border: solid 1px;
+
+  .appHeader__logo{}
+
+  .appHeader__search{}
+
+  .appHeader__account{}
 }
