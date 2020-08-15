@@ -8,5 +8,6 @@ exports[`App should render and match snapshot 1`] = `
     <AppHeader />
   </header>
   <PopularSearches />
+  <SearchResult />
 </div>
 `;
