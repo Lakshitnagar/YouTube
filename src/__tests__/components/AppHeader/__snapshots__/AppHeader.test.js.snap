@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppHeader should render and match snapshot 1`] = `
+<div
+  className="appHeader"
+>
+  <AppLogo />
+  <SearchForm />
+  <div
+    className="appHeader__account"
+  >
+    accounts
+  </div>
+</div>
+`;

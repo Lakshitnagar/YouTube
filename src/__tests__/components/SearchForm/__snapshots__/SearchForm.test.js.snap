@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchForm should render and match snapshot 1`] = `
+<div
+  className="searchForm"
+>
+  <form
+    className="searchForm__form"
+  >
+    <div
+      className="searchForm__inputContainer"
+    >
+      <input
+        autoCapitalize="none"
+        autoComplete="off"
+        autoCorrect="off"
+        id="search"
+        name="search_query"
+        placeholder="Search"
+        spellCheck="false"
+        tabIndex="0"
+        type="text"
+      />
+    </div>
+    <button
+      aria-label="Search"
+      className="searchForm__submit"
+      id="search-icon"
+    >
+      <img
+        alt="search"
+        src="search_18dp.svg"
+      />
+    </button>
+  </form>
+</div>
+`;

@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppLogo should render and match snapshot 1`] = `
+<div
+  className="appLogo"
+>
+  <img
+    alt="logo"
+    height={30}
+    src="logo.svg"
+  />
+</div>
+`;
