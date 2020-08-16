@@ -4,7 +4,7 @@ import {getYTSearchUrl} from "../helpers/UrlHelper";
 const searchByKeywordParams = {
     part: 'snippet',
     maxResults: 25,
-    key: 'QUl6YVN5QUoyd2JrY1I1LUFNRXV5NG9yV0Z5T09hTW5iNUVUeG5z'
+    key: 'AIzaSyAJ2wbkcR5-AMEuy4orWFyOOaMnb5ETxns'
 };
 
 export async function searchByKeyword(keyword) {

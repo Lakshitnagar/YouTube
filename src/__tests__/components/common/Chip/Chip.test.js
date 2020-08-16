@@ -18,4 +18,13 @@ describe('Chip', function () {
 
         expect(wrapper.find('.chip').text()).toEqual('chip text');
     });
+
+    it('should call onClick on clicking the chip with text that passed to it', function () {
+        const mockOnChipClick = jest.fn();
+        const component = <Chip text={'chip text'} onClick={mockOnChipClick}/>;
+        const wrapper = shallow(component);
+
+        wrapper.find('.chip').simulate('click');
+        expect(mockOnChipClick).toHaveBeenCalledWith('chip text');
+    });
 });

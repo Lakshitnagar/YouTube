@@ -3,5 +3,6 @@
 exports[`Chip should render and match snapshot 1`] = `
 <div
   className="chip"
+  onClick={[Function]}
 />
 `;

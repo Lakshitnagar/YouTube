@@ -7,7 +7,11 @@ import {fetchYouTubeVideosByKeyword} from "../../store/actions/YouTubeActions";
 
 const popularSearches = ["All Recommendations", "Sushant Singh Rajput", "Comedy", "Thrillers", "Spookiz", "TED Talks"];
 
-export function PopularSearches() {
+export function PopularSearches(props) {
+    const onChipClick = (keyword)=>{
+        props.fetchYouTubeVideosByKeyword(keyword);
+    };
+
     return (
         <div>
             <div className="popularSearches">
@@ -15,7 +19,7 @@ export function PopularSearches() {
 
                 {popularSearches.map((popularSearch, ind)=>{
                     return <div className="popularSearches__items" key={ind}>
-                        <Chip text={popularSearch}/>
+                        <Chip text={popularSearch} onClick={onChipClick}/>
                     </div>
                 })}
             </div>
