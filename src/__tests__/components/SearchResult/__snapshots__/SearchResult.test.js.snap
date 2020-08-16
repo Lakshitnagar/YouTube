@@ -4,6 +4,26 @@ exports[`SearchResult should render and match snapshot 1`] = `
 <div
   className="searchResult"
 >
-  SearchResult
+  <VideoListItem
+    key="0"
+  />
+  <VideoListItem
+    key="1"
+  />
+  <VideoListItem
+    key="2"
+  />
+  <VideoListItem
+    key="3"
+  />
+  <VideoListItem
+    key="4"
+  />
+  <VideoListItem
+    key="5"
+  />
+  <VideoListItem
+    key="6"
+  />
 </div>
 `;

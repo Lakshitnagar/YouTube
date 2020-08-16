@@ -1,0 +1,21 @@
+.videoListItem{
+  border: solid 1px;
+  height: fit-content;
+  margin: 0 8px 40px 8px;
+  width: 240px;
+
+  .videoListItem__thumbnail{
+    width: 100%;
+  }
+
+  div{
+    padding: 2px 5px;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    max-height: 4rem;
+  }
+
+  .videoListItem__title{}
+
+  .videoListItem__description{}
+}

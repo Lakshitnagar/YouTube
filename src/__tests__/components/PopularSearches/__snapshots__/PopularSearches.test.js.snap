@@ -1,61 +1,63 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`PopularSearches should render and match snapshot 1`] = `
-<div
-  className="popularSearches"
->
+<div>
   <div
-    className="popularSearches__label"
+    className="popularSearches"
   >
-    Popular Searches
-  </div>
-  <div
-    className="popularSearches__items"
-    key="0"
-  >
-    <Chip
-      text="All Recommendations"
-    />
-  </div>
-  <div
-    className="popularSearches__items"
-    key="1"
-  >
-    <Chip
-      text="Sushant Singh Rajput"
-    />
-  </div>
-  <div
-    className="popularSearches__items"
-    key="2"
-  >
-    <Chip
-      text="Comedy"
-    />
-  </div>
-  <div
-    className="popularSearches__items"
-    key="3"
-  >
-    <Chip
-      text="Thrillers"
-    />
-  </div>
-  <div
-    className="popularSearches__items"
-    key="4"
-  >
-    <Chip
-      text="Spookiz"
-    />
-  </div>
-  <div
-    className="popularSearches__items"
-    key="5"
-  >
-    <Chip
-      text="TED Talks"
-    />
+    <div
+      className="popularSearches__label"
+    >
+      Popular Searches
+    </div>
+    <div
+      className="popularSearches__items"
+      key="0"
+    >
+      <Chip
+        text="All Recommendations"
+      />
+    </div>
+    <div
+      className="popularSearches__items"
+      key="1"
+    >
+      <Chip
+        text="Sushant Singh Rajput"
+      />
+    </div>
+    <div
+      className="popularSearches__items"
+      key="2"
+    >
+      <Chip
+        text="Comedy"
+      />
+    </div>
+    <div
+      className="popularSearches__items"
+      key="3"
+    >
+      <Chip
+        text="Thrillers"
+      />
+    </div>
+    <div
+      className="popularSearches__items"
+      key="4"
+    >
+      <Chip
+        text="Spookiz"
+      />
+    </div>
+    <div
+      className="popularSearches__items"
+      key="5"
+    >
+      <Chip
+        text="TED Talks"
+      />
+    </div>
   </div>
 </div>
 `;

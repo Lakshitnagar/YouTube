@@ -1,4 +1,7 @@
 .searchResult{
+  display: flex;
   background-color: #f9f9f9;
-  flex-grow: 1;
+  padding: 16px;
+  flex-wrap: wrap;
+  align-content: flex-start;
 }

@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`VideoListItem should render and match snapshot 1`] = `
+<div
+  className="videoListItem"
+>
+  <img
+    alt="thumbnail"
+    className="videoListItem__thumbnail"
+    src="logo.svg"
+  />
+  <div
+    className="videoListItem__title"
+  >
+    Title
+  </div>
+  <div
+    className="videoListItem__description"
+  >
+    Description
+  </div>
+</div>
+`;
