@@ -1,60 +1,28 @@
 import React from 'react';
 import './SearchResult.scss';
 import VideoListItem from "../VideoListItem/VideoListItem";
+import PropTypes from "prop-types";
+import {connect} from "react-redux";
+import {getVideoList} from "../../helpers/SearchResultHelper";
 
-const searchResults = [
-    {
-        thumbnail: "",
-        title: "",
-        description: "",
-        duration: ""
-    },
-    {
-        thumbnail: "",
-        title: "",
-        description: "",
-        duration: ""
-    },
-    {
-        thumbnail: "",
-        title: "",
-        description: "",
-        duration: ""
-    },
-    {
-        thumbnail: "",
-        title: "",
-        description: "",
-        duration: ""
-    },
-    {
-        thumbnail: "",
-        title: "",
-        description: "",
-        duration: ""
-    },
-    {
-        thumbnail: "",
-        title: "",
-        description: "",
-        duration: ""
-    },
-    {
-        thumbnail: "",
-        title: "",
-        description: "",
-        duration: ""
-    }
-];
-
-function SearchResult() {
+export function SearchResult(props) {
     return (
         <div className="searchResult">
-            {searchResults.map((searchResult, ind)=>{
-                return <VideoListItem key={ind} />
+            {props.videoList && props.videoList.map((videoDetail, ind) => {
+                return <VideoListItem key={ind} videoDetail={videoDetail}/>
             })}
         </div>
     );
 }
 
-export default SearchResult;
+export const mapStateToProps = (state) => {
+    return {
+        videoList: getVideoList(state.youtubeSearchResults)
+    };
+};
+
+SearchResult.propTypes = {
+    videoList: PropTypes.array,
+};
+
+export default connect(mapStateToProps, null)(SearchResult);

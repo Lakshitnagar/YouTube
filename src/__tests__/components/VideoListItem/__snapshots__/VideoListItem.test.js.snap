@@ -7,7 +7,7 @@ exports[`VideoListItem should render and match snapshot 1`] = `
   <img
     alt="thumbnail"
     className="videoListItem__thumbnail"
-    src="logo.svg"
+    src="THUMBNAIL_URL"
   />
   <div
     className="videoListItem__title"

@@ -8,6 +8,6 @@ exports[`App should render and match snapshot 1`] = `
     <AppHeader />
   </header>
   <Connect(PopularSearches) />
-  <SearchResult />
+  <Connect(SearchResult) />
 </div>
 `;

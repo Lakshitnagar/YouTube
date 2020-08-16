@@ -5,7 +5,15 @@ import VideoListItem from "../../../components/VideoListItem/VideoListItem";
 
 describe('VideoListItem', function () {
     it('should render and match snapshot', function () {
-        const component = <VideoListItem/>;
+        const videoDetail = {
+            snippet: {
+                thumbnails: {
+                    medium: {url: 'THUMBNAIL_URL'}
+                }
+            }
+        };
+
+        const component = <VideoListItem videoDetail={videoDetail}/>;
 
         const wrapper = shallow(component);
 

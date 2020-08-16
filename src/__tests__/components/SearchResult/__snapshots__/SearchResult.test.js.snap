@@ -6,24 +6,15 @@ exports[`SearchResult should render and match snapshot 1`] = `
 >
   <VideoListItem
     key="0"
+    videoDetail={Object {}}
   />
   <VideoListItem
     key="1"
+    videoDetail={Object {}}
   />
   <VideoListItem
     key="2"
-  />
-  <VideoListItem
-    key="3"
-  />
-  <VideoListItem
-    key="4"
-  />
-  <VideoListItem
-    key="5"
-  />
-  <VideoListItem
-    key="6"
+    videoDetail={Object {}}
   />
 </div>
 `;
