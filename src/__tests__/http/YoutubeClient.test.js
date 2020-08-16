@@ -31,7 +31,7 @@ describe('YoutubeClient', function () {
                 url: "video1_url"
             }]);
 
-            expect(Client.get).toHaveBeenCalledWith("YouTubeSearchBykeywordUrl", {"key": "AIzaSyAJ2wbkcR5-AMEuy4orWFyOOaMnb5ETxns", "maxResults": 25, "part": "snippet", "q": "testKeyword"});
+            expect(Client.get).toHaveBeenCalledWith("YouTubeSearchBykeywordUrl", {"key": "QUl6YVN5QUoyd2JrY1I1LUFNRXV5NG9yV0Z5T09hTW5iNUVUeG5z", "maxResults": 25, "part": "snippet", "q": "testKeyword"});
         });
     });
 });
