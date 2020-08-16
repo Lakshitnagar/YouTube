@@ -2,6 +2,7 @@ import React from 'react';
 import {Provider} from "react-redux";
 import App from '../App';
 
+jest.mock('../App', () => ()=><div>App</div>);
 jest.mock('../store/Store', () => {return {}});
 jest.mock('react-redux', () => {return {
     Provider: ()=><div>Provider</div>
@@ -19,7 +20,6 @@ describe('index', () => {
         document.body.appendChild(element);
 
         import('../index.js').then(()=>{
-            const actual = document.body.firstChild;
 
             expect(mockRender).toHaveBeenCalledWith(<Provider store={{}}><App /></Provider>, element);
 

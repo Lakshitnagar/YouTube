@@ -1,10 +1,13 @@
 import React from 'react';
+import PropTypes from "prop-types";
+import {connect} from "react-redux";
 import './PopularSearches.scss';
 import Chip from "../common/Chip/Chip";
+import {fetchYouTubeVideosByKeyword} from "../../store/actions/YouTubeActions";
 
 const popularSearches = ["All Recommendations", "Sushant Singh Rajput", "Comedy", "Thrillers", "Spookiz", "TED Talks"];
 
-function PopularSearches() {
+export function PopularSearches() {
     return (
         <div>
             <div className="popularSearches">
@@ -20,4 +23,14 @@ function PopularSearches() {
     );
 }
 
-export default PopularSearches;
+export const mapDispatchToProps = (dispatch) => {
+    return {
+        fetchYouTubeVideosByKeyword: (keyword) => dispatch(fetchYouTubeVideosByKeyword(keyword))
+    };
+};
+
+PopularSearches.propTypes = {
+    fetchYouTubeVideosByKeyword: PropTypes.func,
+};
+
+export default connect(null, mapDispatchToProps)(PopularSearches);
