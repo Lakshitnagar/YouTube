@@ -46,7 +46,24 @@ describe('YouTubeActions', () => {
             await fetchYouTubeVideosByKeyword('keyword')(store.dispatch);
 
             const actions = store.getActions();
-            expect(actions).toEqual([{"payload": "SEARCH_BY_KEYWORD_RESPONSE", "type": "SET_YOU_TUBE_SEARCH_RESULTS"}]);
+            expect(actions).toEqual([
+                {"payload": "YOUTUBE_SEACRH_API", "type": "REMOVE_API_FAILURE_STATUS"},
+                {"payload": "SEARCH_BY_KEYWORD_RESPONSE", "type": "SET_YOU_TUBE_SEARCH_RESULTS"}
+            ]);
+        });
+
+        it('should save api failure status on error', async () => {
+            const searchByKeywordResponse = 'SEARCH_BY_KEYWORD_RESPONSE';
+
+            searchByKeyword.mockRejectedValue(searchByKeywordResponse);
+
+            await fetchYouTubeVideosByKeyword('keyword')(store.dispatch);
+
+            const actions = store.getActions();
+            expect(actions).toEqual([
+                {"payload": "YOUTUBE_SEACRH_API", "type": "REMOVE_API_FAILURE_STATUS"},
+                {"payload": "YOUTUBE_SEACRH_API", "type": "ADD_API_FAILURE_STATUS"}
+            ]);
         });
     });
 });
