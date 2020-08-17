@@ -4,7 +4,10 @@ describe('Store', () => {
     it('should initialize', () => {
         const actual = store.getState();
         const expected = {
-            "youtubeSearchResults": null
+            "youtubeSearchResults": null,
+            "presentationConfig": {
+                "apiStatus": []
+            }
         };
         expect(actual).toEqual(expected);
     });
