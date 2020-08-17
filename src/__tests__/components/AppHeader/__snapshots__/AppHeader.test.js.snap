@@ -5,7 +5,7 @@ exports[`AppHeader should render and match snapshot 1`] = `
   className="appHeader"
 >
   <AppLogo />
-  <SearchForm />
+  <Connect(SearchForm) />
   <div
     className="appHeader__account"
   >

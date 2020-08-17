@@ -6,6 +6,7 @@ exports[`SearchForm should render and match snapshot 1`] = `
 >
   <form
     className="searchForm__form"
+    onSubmit={[Function]}
   >
     <div
       className="searchForm__inputContainer"
@@ -15,10 +16,9 @@ exports[`SearchForm should render and match snapshot 1`] = `
         autoComplete="off"
         autoCorrect="off"
         id="search"
-        name="search_query"
+        onChange={[Function]}
         placeholder="Search"
         spellCheck="false"
-        tabIndex="0"
         type="text"
       />
     </div>
