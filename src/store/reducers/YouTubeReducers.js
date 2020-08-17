@@ -1,5 +1,10 @@
 import {createReducer} from '@reduxjs/toolkit';
-import {resetYouTubeSearchResults, setYouTubeSearchResults} from '../actions/YouTubeActions';
+import {
+    resetYouTubeSearchKeyword,
+    resetYouTubeSearchResults,
+    setYouTubeSearchKeyword,
+    setYouTubeSearchResults
+} from '../actions/YouTubeActions';
 
 const initialState = null;
 
@@ -12,6 +17,16 @@ const YouTubeReducers = createReducer(initialState, {
     }
 });
 
+const youTubeKeywordReducer = createReducer(initialState, {
+    [setYouTubeSearchKeyword]: (state, action) => {
+        return action.payload;
+    },
+    [resetYouTubeSearchKeyword]: () => {
+        return initialState;
+    }
+});
+
 export {
-    YouTubeReducers
+    YouTubeReducers,
+    youTubeKeywordReducer
 };

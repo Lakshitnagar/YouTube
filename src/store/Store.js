@@ -1,10 +1,11 @@
 import {configureStore} from '@reduxjs/toolkit';
-import {YouTubeReducers} from "./reducers/YouTubeReducers";
+import {youTubeKeywordReducer, YouTubeReducers} from "./reducers/YouTubeReducers";
 import {presentationReducer} from "./reducers/PresentationReducer";
 
 const store = configureStore({
     reducer: {
         youtubeSearchResults: YouTubeReducers,
+        youtubeSearchKeyword: youTubeKeywordReducer,
         presentationConfig: presentationReducer,
     }
 });

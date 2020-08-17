@@ -5,6 +5,7 @@ describe('Store', () => {
         const actual = store.getState();
         const expected = {
             "youtubeSearchResults": null,
+            "youtubeSearchKeyword": null,
             "presentationConfig": {
                 "apiStatus": []
             }
