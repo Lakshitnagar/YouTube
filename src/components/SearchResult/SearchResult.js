@@ -18,6 +18,7 @@ export function SearchResult(props) {
 
     return (
         <div className="searchResult">
+            {props.searchKeyword && <div>Showing results for {props.searchKeyword}</div>}
             {props.videoList && props.videoList.map((videoDetail, ind) => {
                 return <VideoListItem key={ind} videoDetail={videoDetail}/>
             })}
@@ -28,12 +29,14 @@ export function SearchResult(props) {
 export const mapStateToProps = (state) => {
     return {
         videoList: getVideoList(state.youtubeSearchResults),
+        searchKeyword: state.youtubeSearchKeyword,
         isError: state.presentationConfig.apiStatus.includes(YOUTUBE_SEACRH_API)
     };
 };
 
 SearchResult.propTypes = {
     videoList: PropTypes.array,
+    searchKeyword: PropTypes.string,
     isError: PropTypes.bool
 };
 

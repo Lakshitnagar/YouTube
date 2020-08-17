@@ -4,6 +4,10 @@ exports[`SearchResult should render and match snapshot 1`] = `
 <div
   className="searchResult"
 >
+  <div>
+    Showing results for 
+    hello kitty
+  </div>
   <VideoListItem
     key="0"
     videoDetail={Object {}}

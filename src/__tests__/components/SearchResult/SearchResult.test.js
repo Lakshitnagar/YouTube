@@ -7,7 +7,7 @@ import * as SearchResultHelper from "../../../helpers/SearchResultHelper";
 describe('SearchResult', function () {
 
     it('should render and match snapshot', function () {
-        const component = <SearchResult videoList={[{}, {}, {}]}/>;
+        const component = <SearchResult videoList={[{}, {}, {}]} searchKeyword={'hello kitty'}/>;
 
         const wrapper = shallow(component);
 
@@ -31,6 +31,7 @@ describe('mapStateToProps', function () {
     it('should add some processed state variables to props', function () {
         const state = {
             youtubeSearchResults: {},
+            youtubeSearchKeyword: 'SEARCH_KEYWORD',
             presentationConfig: {
                 apiStatus: ['YOUTUBE_SEACRH_API']
             }
@@ -39,6 +40,7 @@ describe('mapStateToProps', function () {
 
         expect(actual).toEqual({
             videoList: 'VIDEO_LIST',
+            searchKeyword: 'SEARCH_KEYWORD',
             isError: true
         });
     });
