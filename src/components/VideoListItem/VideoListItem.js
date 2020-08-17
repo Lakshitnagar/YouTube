@@ -6,8 +6,10 @@ import {getVideoDisplayDate} from "../../Utils/TimeUtil";
 function VideoListItem(props) {
     return (
         <div className="videoListItem">
-            <img className="videoListItem__thumbnail" src={props.videoDetail.snippet.thumbnails.medium.url}
-                 alt='thumbnail'/>
+            <div className="videoListItem__thumbnail">
+                <img src={props.videoDetail.snippet.thumbnails.medium.url}
+                     alt='thumbnail'/>
+            </div>
 
             <div className="videoListItem__title">{props.videoDetail.snippet.title}</div>
             <div className="videoListItem__channel">{props.videoDetail.snippet.channelTitle}</div>
