@@ -5,8 +5,9 @@ exports[`SearchResult should render and match snapshot 1`] = `
   className="searchResult"
 >
   <div>
-    Showing results for 
+    Showing results for "
     hello kitty
+    "
   </div>
   <VideoListItem
     key="0"

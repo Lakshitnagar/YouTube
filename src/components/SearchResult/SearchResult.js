@@ -18,7 +18,7 @@ export function SearchResult(props) {
 
     return (
         <div className="searchResult">
-            {props.searchKeyword && <div>Showing results for {props.searchKeyword}</div>}
+            {props.searchKeyword && <div>Showing results for "{props.searchKeyword}"</div>}
             {props.videoList && props.videoList.map((videoDetail, ind) => {
                 return <VideoListItem key={ind} videoDetail={videoDetail}/>
             })}
