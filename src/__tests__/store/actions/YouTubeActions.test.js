@@ -38,6 +38,15 @@ describe('YouTubeActions', () => {
             store.clearActions();
         });
 
+        it('should fetch from youtube with same keyword', async () => {
+            const searchByKeywordResponse = 'SEARCH_BY_KEYWORD_RESPONSE';
+            searchByKeyword.mockResolvedValue(searchByKeywordResponse);
+
+            await fetchYouTubeVideosByKeyword('keyword')(store.dispatch);
+
+            expect(searchByKeyword).toHaveBeenCalledWith('keyword');
+        });
+
         it('should fetch results and save it to redux', async () => {
             const searchByKeywordResponse = 'SEARCH_BY_KEYWORD_RESPONSE';
 
