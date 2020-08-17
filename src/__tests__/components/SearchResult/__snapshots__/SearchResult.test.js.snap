@@ -18,3 +18,11 @@ exports[`SearchResult should render and match snapshot 1`] = `
   />
 </div>
 `;
+
+exports[`SearchResult should render and match snapshot on error 1`] = `
+<div
+  className="searchError"
+>
+  Ahh.. Something is not right !!
+</div>
+`;

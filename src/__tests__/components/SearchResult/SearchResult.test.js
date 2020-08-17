@@ -13,6 +13,14 @@ describe('SearchResult', function () {
 
         expect(shallowToJson(wrapper)).toMatchSnapshot();
     });
+
+    it('should render and match snapshot on error', function () {
+        const component = <SearchResult isError={true}/>;
+
+        const wrapper = shallow(component);
+
+        expect(shallowToJson(wrapper)).toMatchSnapshot();
+    });
 });
 
 describe('mapStateToProps', function () {
@@ -22,12 +30,16 @@ describe('mapStateToProps', function () {
 
     it('should add some processed state variables to props', function () {
         const state = {
-            youtubeSearchResults: {}
+            youtubeSearchResults: {},
+            presentationConfig: {
+                apiStatus: ['YOUTUBE_SEACRH_API']
+            }
         };
         const actual = mapStateToProps(state);
 
         expect(actual).toEqual({
-            videoList: 'VIDEO_LIST'
+            videoList: 'VIDEO_LIST',
+            isError: true
         });
     });
 });

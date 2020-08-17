@@ -1,4 +1,4 @@
-.searchResult{
+.searchResult {
   display: flex;
   background-color: #f9f9f9;
   padding: 16px;
@@ -9,4 +9,10 @@
     content: '';
     flex-grow: 1000000000;
   }
+}
+
+.searchError {
+  margin: auto;
+  font-size: xx-large;
+  color: darkgoldenrod;
 }
