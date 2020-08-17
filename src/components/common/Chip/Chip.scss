@@ -7,6 +7,10 @@
   background-color: rgba(0,0,0,0.05);
   border-radius: 16px;
   cursor: pointer;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 200px;
 
   &:hover{
     background-color: rgba(0,0,0,0.1);

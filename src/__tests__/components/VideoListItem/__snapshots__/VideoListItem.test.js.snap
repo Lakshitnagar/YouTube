@@ -12,12 +12,17 @@ exports[`VideoListItem should render and match snapshot 1`] = `
   <div
     className="videoListItem__title"
   >
-    Title
+    VIDEO_TITLE
   </div>
   <div
-    className="videoListItem__description"
+    className="videoListItem__channel"
   >
-    Description
+    CHANNEL_TITLE
+  </div>
+  <div
+    className="videoListItem__time"
+  >
+    DISPLAY_DATE
   </div>
 </div>
 `;
