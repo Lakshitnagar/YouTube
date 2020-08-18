@@ -8,6 +8,7 @@
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "axios": "^0.19.2",
+    "ini": "^1.3.5",
     "prop-type": "^0.0.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -18,7 +19,11 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "linux:setup": "docker build -t youtube-docker .",
+    "linux:yarn:start": "docker run --rm -it -p 3000:3000 youtube-docker yarn start",
+    "linux:yarn:build": "docker run --rm youtube-docker yarn build",
+    "linux:yarn:test": "docker run --rm youtube-docker yarn test --coverage --watchAll=false"
   },
   "eslintConfig": {
     "extends": "react-app"
