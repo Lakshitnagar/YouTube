@@ -20,9 +20,10 @@ export function SearchResult(props) {
         <div className="search">
             {props.searchKeyword && <div className="search__header">Showing results for "{props.searchKeyword}"</div>}
             <div className="search__result">
-                {props.videoList && props.videoList.map((videoDetail, ind) => {
+                {props.videoList.length!==0 && props.videoList.map((videoDetail, ind) => {
                     return <VideoListItem key={ind} videoDetail={videoDetail}/>
                 })}
+                {!props.videoList.length && <div>Search videos by any keyword</div>}
             </div>
         </div>
     );

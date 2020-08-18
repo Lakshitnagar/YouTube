@@ -21,6 +21,14 @@ describe('SearchResult', function () {
 
         expect(shallowToJson(wrapper)).toMatchSnapshot();
     });
+
+    it('should render and match snapshot on empty result', function () {
+        const component = <SearchResult videoList={[]}/>;
+
+        const wrapper = shallow(component);
+
+        expect(shallowToJson(wrapper)).toMatchSnapshot();
+    });
 });
 
 describe('mapStateToProps', function () {
