@@ -2,25 +2,31 @@
 
 exports[`SearchResult should render and match snapshot 1`] = `
 <div
-  className="searchResult"
+  className="search"
 >
-  <div>
+  <div
+    className="search__header"
+  >
     Showing results for "
     hello kitty
     "
   </div>
-  <VideoListItem
-    key="0"
-    videoDetail={Object {}}
-  />
-  <VideoListItem
-    key="1"
-    videoDetail={Object {}}
-  />
-  <VideoListItem
-    key="2"
-    videoDetail={Object {}}
-  />
+  <div
+    className="search__result"
+  >
+    <VideoListItem
+      key="0"
+      videoDetail={Object {}}
+    />
+    <VideoListItem
+      key="1"
+      videoDetail={Object {}}
+    />
+    <VideoListItem
+      key="2"
+      videoDetail={Object {}}
+    />
+  </div>
 </div>
 `;
 

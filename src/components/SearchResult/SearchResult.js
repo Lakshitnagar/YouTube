@@ -17,11 +17,13 @@ export function SearchResult(props) {
     }
 
     return (
-        <div className="searchResult">
-            {props.searchKeyword && <div>Showing results for "{props.searchKeyword}"</div>}
-            {props.videoList && props.videoList.map((videoDetail, ind) => {
-                return <VideoListItem key={ind} videoDetail={videoDetail}/>
-            })}
+        <div className="search">
+            {props.searchKeyword && <div className="search__header">Showing results for "{props.searchKeyword}"</div>}
+            <div className="search__result">
+                {props.videoList && props.videoList.map((videoDetail, ind) => {
+                    return <VideoListItem key={ind} videoDetail={videoDetail}/>
+                })}
+            </div>
         </div>
     );
 }
