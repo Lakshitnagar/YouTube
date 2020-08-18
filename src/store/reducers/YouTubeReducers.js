@@ -3,7 +3,8 @@ import {
     resetYouTubeSearchKeyword,
     resetYouTubeSearchResults,
     setYouTubeSearchKeyword,
-    setYouTubeSearchResults
+    setYouTubeSearchResults,
+    updateYouTubeSearchResults
 } from '../actions/YouTubeActions';
 
 const initialState = null;
@@ -14,6 +15,13 @@ const YouTubeReducers = createReducer(initialState, {
     },
     [resetYouTubeSearchResults]: () => {
         return initialState;
+    },
+    [updateYouTubeSearchResults]: (state, action) => {
+        let newPayload = action.payload;
+        if (newPayload && state) {
+            newPayload.items = [...state.items, ...newPayload.items];
+        }
+        return newPayload;
     }
 });
 

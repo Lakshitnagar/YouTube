@@ -5,7 +5,7 @@ import * as UrlHelper from "../../helpers/UrlHelper";
 describe('YoutubeClient', function () {
 
     describe('searchByKeyword', function () {
-        beforeEach(()=>{
+        beforeEach(() => {
             spyOn(Client, 'get').and.returnValue(searchResponse);
             spyOn(UrlHelper, 'getYTSearchUrl').and.returnValue("YouTubeSearchBykeywordUrl");
         });
@@ -14,7 +14,7 @@ describe('YoutubeClient', function () {
             data: [{
                 id: "video1",
                 url: "video1_url"
-            },{
+            }, {
                 id: "video1",
                 url: "video1_url"
             }]
@@ -26,17 +26,23 @@ describe('YoutubeClient', function () {
             expect(data).toEqual([{
                 id: "video1",
                 url: "video1_url"
-            },{
+            }, {
                 id: "video1",
                 url: "video1_url"
             }]);
 
-            expect(Client.get).toHaveBeenCalledWith("YouTubeSearchBykeywordUrl", {"key": "AIzaSyAJ2wbkcR5-AMEuy4orWFyOOaMnb5ETxns", "maxResults": 25, "part": "snippet", "q": "testKeyword", "type": "video"});
+            expect(Client.get).toHaveBeenCalledWith("YouTubeSearchBykeywordUrl", {
+                "key": "AIzaSyAJ2wbkcR5-AMEuy4orWFyOOaMnb5ETxns",
+                "maxResults": 25,
+                "part": "snippet",
+                "q": "testKeyword",
+                "type": "video"
+            });
         });
     });
 
     describe('searchByKeywordNextPage', function () {
-        beforeEach(()=>{
+        beforeEach(() => {
             spyOn(Client, 'get').and.returnValue(searchResponse);
             spyOn(UrlHelper, 'getYTSearchUrl').and.returnValue("YouTubeSearchBykeywordUrl");
         });
@@ -45,24 +51,52 @@ describe('YoutubeClient', function () {
             data: [{
                 id: "video1",
                 url: "video1_url"
-            },{
+            }, {
                 id: "video1",
                 url: "video1_url"
             }]
         };
 
-        it('should fetch video results by given keyword', async function () {
+        it('should fetch video results by given keyword and nextPageToken', async function () {
             const data = await searchByKeywordNextPage("testKeyword", "nextPageToken");
 
             expect(data).toEqual([{
                 id: "video1",
                 url: "video1_url"
-            },{
+            }, {
                 id: "video1",
                 url: "video1_url"
             }]);
 
-            expect(Client.get).toHaveBeenCalledWith("YouTubeSearchBykeywordUrl", {"key": "AIzaSyAJ2wbkcR5-AMEuy4orWFyOOaMnb5ETxns", "maxResults": 25, "part": "snippet", "q": "testKeyword", "pageToken": "nextPageToken", "type": "video"});
+            expect(Client.get).toHaveBeenCalledWith("YouTubeSearchBykeywordUrl", {
+                "key": "AIzaSyAJ2wbkcR5-AMEuy4orWFyOOaMnb5ETxns",
+                "maxResults": 25,
+                "part": "snippet",
+                "q": "testKeyword",
+                "pageToken": "nextPageToken",
+                "type": "video"
+            });
+        });
+
+        it('should fetch video results by given keyword but not nextPageToken', async function () {
+            const data = await searchByKeywordNextPage("testKeyword");
+
+            expect(data).toEqual([{
+                id: "video1",
+                url: "video1_url"
+            }, {
+                id: "video1",
+                url: "video1_url"
+            }]);
+
+            expect(Client.get).toHaveBeenCalledWith("YouTubeSearchBykeywordUrl", {
+                "key": "AIzaSyAJ2wbkcR5-AMEuy4orWFyOOaMnb5ETxns",
+                "maxResults": 25,
+                "part": "snippet",
+                "q": "testKeyword",
+                "pageToken": "",
+                "type": "video"
+            });
         });
     });
 });
