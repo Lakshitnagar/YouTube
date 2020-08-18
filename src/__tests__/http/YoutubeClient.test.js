@@ -32,7 +32,7 @@ describe('YoutubeClient', function () {
             }]);
 
             expect(Client.get).toHaveBeenCalledWith("YouTubeSearchBykeywordUrl", {
-                "key": "AIzaSyAJ2wbkcR5-AMEuy4orWFyOOaMnb5ETxns",
+                "key": "AIzaSyDTtjYkL2ZIgGLSY8Sn2yEUev6zSk8nwxI",
                 "maxResults": 25,
                 "part": "snippet",
                 "q": "testKeyword",
@@ -69,7 +69,7 @@ describe('YoutubeClient', function () {
             }]);
 
             expect(Client.get).toHaveBeenCalledWith("YouTubeSearchBykeywordUrl", {
-                "key": "AIzaSyAJ2wbkcR5-AMEuy4orWFyOOaMnb5ETxns",
+                "key": "AIzaSyDTtjYkL2ZIgGLSY8Sn2yEUev6zSk8nwxI",
                 "maxResults": 25,
                 "part": "snippet",
                 "q": "testKeyword",
@@ -90,7 +90,7 @@ describe('YoutubeClient', function () {
             }]);
 
             expect(Client.get).toHaveBeenCalledWith("YouTubeSearchBykeywordUrl", {
-                "key": "AIzaSyAJ2wbkcR5-AMEuy4orWFyOOaMnb5ETxns",
+                "key": "AIzaSyDTtjYkL2ZIgGLSY8Sn2yEUev6zSk8nwxI",
                 "maxResults": 25,
                 "part": "snippet",
                 "q": "testKeyword",

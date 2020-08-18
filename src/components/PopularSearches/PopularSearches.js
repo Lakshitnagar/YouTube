@@ -34,7 +34,7 @@ export const mapDispatchToProps = (dispatch) => {
 };
 
 PopularSearches.propTypes = {
-    fetchYouTubeVideosByKeyword: PropTypes.func,
+    fetchYouTubeVideosByKeyword: PropTypes.func
 };
 
 export default connect(null, mapDispatchToProps)(PopularSearches);

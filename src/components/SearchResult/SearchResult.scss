@@ -12,6 +12,8 @@
   padding: 16px;
   flex-wrap: wrap;
   align-content: flex-start;
+  height: calc(100vh - 224px);
+  overflow: scroll;
 
   &::after {
     content: '';

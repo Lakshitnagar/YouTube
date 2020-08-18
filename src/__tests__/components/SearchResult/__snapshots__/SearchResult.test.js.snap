@@ -3,6 +3,7 @@
 exports[`SearchResult should render and match snapshot 1`] = `
 <div
   className="search"
+  onScroll={[Function]}
 >
   <div
     className="search__header"
@@ -33,6 +34,7 @@ exports[`SearchResult should render and match snapshot 1`] = `
 exports[`SearchResult should render and match snapshot on empty result 1`] = `
 <div
   className="search"
+  onScroll={[Function]}
 >
   <div
     className="search__result"

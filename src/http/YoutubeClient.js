@@ -5,7 +5,7 @@ const searchByKeywordParams = {
     part: 'snippet',
     maxResults: 25,
     type: 'video',
-    key: 'AIzaSyAJ2wbkcR5-AMEuy4orWFyOOaMnb5ETxns'
+    key: 'AIzaSyDTtjYkL2ZIgGLSY8Sn2yEUev6zSk8nwxI'
 };
 
 export async function searchByKeyword(keyword) {
